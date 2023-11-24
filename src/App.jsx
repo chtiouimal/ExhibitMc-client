@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import { ExhibitPage, LandingPage, SettingsPage } from './pages'
+import { ExhibitPage, SelectionPage } from './pages'
 import { MainLayout } from './layouts'
 
 function App() {
@@ -8,9 +8,8 @@ function App() {
   return (
     <Routes>
       <Route path="" element={<MainLayout />}> 
-        <Route index element={<LandingPage />} />
-        <Route path="exhibit" element={<ExhibitPage />} />
-        <Route path="settings" element={<SettingsPage />} />
+        <Route index element={<ExhibitPage />} />
+        <Route path="settings" element={<SelectionPage />} />
       </Route>
     </Routes>
   )

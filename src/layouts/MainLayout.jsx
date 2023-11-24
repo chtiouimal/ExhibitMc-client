@@ -8,7 +8,6 @@ const MainLayout = () => {
             <NavLink to="">
                 <img src={LOGO} alt="mc_logo" />
             </NavLink>
-            <NavLink to="/exhibit">Explore</NavLink>
         </div>
         <div className="mc-main-layout--right">
             <NavLink to="/settings">

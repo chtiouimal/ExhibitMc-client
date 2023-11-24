@@ -1,12 +1,14 @@
 .mc-main-layout {
     position: relative;
+    height: 100vh;
     .mc-main-layout--left, .mc-main-layout--right {
         position: fixed;
         height: 80px;
-        top: 0;
+        top: 16px;
         display: flex;
         align-items: center;
         gap: 32px;
+        z-index: 9;
     }
     .mc-main-layout--left {
         left: 32px;

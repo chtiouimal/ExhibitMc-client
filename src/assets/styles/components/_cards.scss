@@ -1,0 +1,177 @@
+.mc-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    border: 1px solid $border;
+    .mc-music-img {
+        position: absolute;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.8;
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+    }
+    .mc-music-details {
+        position: inherit;
+        z-index: 1;
+        max-width: 200px;
+        width: 100%;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 16px;
+        height: 100%;
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .mc-btn-round {
+            align-self: flex-end;
+        }
+    }
+    .mc-music-title {
+        h4,
+        span {
+            margin: 0;
+        }
+        h4 {
+            font-size: 28px;
+        }
+    }
+}
+
+.mc-card-empty {
+    cursor: pointer;
+    &:hover {
+        border-color: $primary;
+        opacity: 0.6;
+        * {
+            color: $primary;
+        }
+    }
+}
+
+.ant-skeleton.mc-card-loading {
+    border-radius: 20px;
+    .ant-skeleton-image.mc-card-loading {
+        height: 250px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        * {
+            opacity: 0.6;
+            height: 30px;
+        }
+    }
+}
+
+.ant-skeleton.mc-card-loading-light {
+    border-radius: 20px;
+    .ant-skeleton-image.mc-card-loading-light {
+        height: 150px;
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        * {
+            opacity: 0.6;
+            height: 20px;
+        }
+    }
+}
+
+:where(.css-dev-only-do-not-override-2i2tap).ant-skeleton.ant-skeleton-active .ant-skeleton-title,
+:where(.css-dev-only-do-not-override-2i2tap).ant-skeleton.ant-skeleton-active .ant-skeleton-paragraph>li,
+:where(.css-dev-only-do-not-override-2i2tap).ant-skeleton.ant-skeleton-active .ant-skeleton-avatar,
+:where(.css-dev-only-do-not-override-2i2tap).ant-skeleton.ant-skeleton-active .ant-skeleton-button,
+:where(.css-dev-only-do-not-override-2i2tap).ant-skeleton.ant-skeleton-active .ant-skeleton-input,
+:where(.css-dev-only-do-not-override-2i2tap).ant-skeleton.ant-skeleton-active .ant-skeleton-image {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 25%, rgba(0, 0, 0, 0.15) 37%, rgba(0, 0, 0, 0.06) 63%);
+    background-size: 400% 100%;
+    animation-name: css-dev-only-do-not-override-2i2tap-ant-skeleton-loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.mc-card-light {
+    position: relative;
+    .mc-radio {
+            position: absolute;
+            top: -20px;
+            right: -8px;
+            z-index: 1;
+    }
+    h6 {
+        font: $tiny-title
+    }
+
+    span {
+        font: $tiny-text;
+    }
+
+    max-width: 150px;
+    margin-bottom: 16px;
+    position: relative;
+
+    .mc-checkbox {
+        position: absolute;
+        right: -8px;
+        top: -8px;
+        z-index: 2;
+        background: $dark;
+        padding: 8px;
+        border-radius: 50%;
+        line-height: unset;
+    }
+
+    .mc-img-light {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+        height: 150px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        button {
+            position: absolute;
+            z-index: 1;
+        }
+    }
+
+    .mc-title-light {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        * {
+            text-align: center;
+        }
+    }
+}

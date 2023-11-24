@@ -1,0 +1,224 @@
+.mc-radio .ant-radio {
+    border: 1px solid;
+    border-color: transparent;
+    .ant-radio-inner {
+        background-color: transparent;
+        border-color: $light;
+    }
+}
+
+.mc-radio:hover .ant-radio {
+    border-color: $primary;
+    .ant-radio-inner {
+        border-color: $primary;
+    }
+}
+
+:where(.css-dev-only-do-not-override-2i2tap).ant-radio-wrapper .ant-radio-checked::after {
+    border: 1px solid $primary;
+}
+
+:where(.css-dev-only-do-not-override-2i2tap).ant-radio-wrapper .ant-radio-inner::after {
+    background-color: $primary;
+}
+
+:where(.css-dev-only-do-not-override-2i2tap).ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+    border-color: $primary !important;
+    // background-color: #1677ff;
+}
+
+.mc-form {
+    width: 100%;
+    height: 100%;
+    * {
+        color: $light !important;
+    }
+    input {
+        background-color: transparent;
+        height: 40px;
+        border-color: $border;
+    }
+}
+
+.mc-radio-color-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    .mc-radio-color {
+        width: calc(calc(100% - 16px) / 3);
+    }
+}
+
+.mc-radio-color {
+    height: auto;
+    width: 80px;
+    aspect-ratio: 1;
+    background-color: $primary;
+    border-radius: 10px;
+    margin-right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    .ant-radio {
+        padding: 8px;
+        align-self: unset;
+    }
+}
+
+.mc-checkbox {
+    .ant-checkbox:hover {
+        .ant-checkbox-inner {
+            border-radius: 50%;
+        }
+    }
+
+    &:hover .ant-checkbox-inner {
+        border-color: $primary !important;
+    }
+
+    .ant-checkbox .ant-checkbox-inner:after {
+        border-color: $dark;
+    }
+
+    .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: $primary !important;
+        border-color: $primary !important;
+    }
+
+    .ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover .ant-checkbox-inner,
+    .ant-checkbox:not(.ant-checkbox-disabled):hover .ant-checkbox-inner {
+        border-color: $primary;
+    }
+
+    .ant-checkbox-inner {
+        background-color: $dark;
+        border-radius: 50%;
+    }
+}
+
+.mc-color-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+
+    .mc-color-form-actions {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.mc-radio-color {
+    .ant-radio-inner {
+        background-color: $border;
+        border-color: $border;
+    }
+
+    &:hover {
+        .ant-radio-inner {
+            border-color: $primary;
+        }
+    }
+
+    .ant-radio-checked .ant-radio-inner {
+        border-color: $primary;
+        background-color: $primary;
+    }
+
+    .ant-radio-checked::after {
+        border-color: $primary;
+    }
+}
+
+.ant-form-item-explain-error {
+    font-size: 12px;
+    color: #ff4d4f !important;
+}
+
+.mc-radio-filter {
+    gap: 0 !important;
+}
+
+.mc-radio-filter-btn.ant-radio-button-wrapper {
+    background: transparent;
+    border-color: $border;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    &:hover{
+        color: $primary;
+        border-color: $primary;
+        span {
+            color: $primary;
+        }
+        &::before {
+            background-color: $primary !important;
+        }
+    }
+    span {
+        color: $light;
+    }
+}
+
+:where(.css-dev-only-do-not-override-2i2tap).mc-radio-filter-btn.ant-radio-button-wrapper:not(:first-child)::before {
+    position: absolute;
+    inset-block-start: -1px;
+    inset-inline-start: -1px;
+    display: block;
+    box-sizing: content-box;
+    width: 1px;
+    height: 100%;
+    padding-block: 1px;
+    padding-inline: 0;
+    background-color: $border;
+    transition: background-color 0.3s;
+    content: "";
+}
+
+.ant-radio-button-wrapper-checked.mc-radio-filter-btn {
+    border-color: $primary !important;
+    background: $primary;
+    span {
+        color: $dark;
+        font-weight: 700;
+    }
+    &:hover {
+        span {
+            color: $dark;
+        }
+    }
+}
+
+:where(.css-dev-only-do-not-override-2i2tap).mc-radio-filter-btn.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+    background-color: $primary;
+}
+
+.mc-search-input {
+    input.ant-input, .ant-input-group-addon button {
+        height: 40px;
+        background-color: transparent;
+        border-color: $border;
+        color: $light;
+    }
+    input.ant-input {
+        &:hover, &:focus {
+            border-color: $primary;
+        }
+    }
+    .ant-input-group-addon button.ant-btn {
+        width: 40px;
+        &:active {
+            border-color: $primary;
+        }
+    }
+}
+
+input::placeholder {
+    color: $light !important;
+    opacity: 0.4;
+}

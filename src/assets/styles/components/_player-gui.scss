@@ -1,0 +1,50 @@
+.mc-audioplayer-gui {
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+    z-index: 1;
+    height: 80px;
+    background-color: $dark;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    .mc-audioplayer-img {
+        cursor: pointer;
+        position: relative;
+        height: 64px;
+        width: 64px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        & > span {
+            position: absolute;
+        }
+    }
+    .mc-audioplayer-details {
+        min-width: 260px;
+    }
+}
+
+.mc-rotate-animation {
+    animation: rotateAnimation 2s linear infinite;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

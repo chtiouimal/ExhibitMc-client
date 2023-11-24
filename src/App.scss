@@ -1,2 +1,20 @@
+/* *** variables *** */
+@import "./assets/styles/variables/colors";
+@import "./assets/styles/variables/fonts";
+
+/* *** globals *** */
+@import "./assets/styles/globals";
+
 /* *** layouts *** */
 @import "./assets/styles/layouts";
+
+/* *** pages *** */
+@import "./assets/styles/pages";
+
+/* *** components *** */
+@import "./assets/styles/components/forms";
+@import "./assets/styles/components/cards";
+@import "./assets/styles/components/drawer";
+@import "./assets/styles/components/preview";
+@import "./assets/styles/components/backdrop";
+@import "./assets/styles/components/player-gui";

@@ -1,0 +1,35 @@
+.mc-drawer.ant-drawer-content {
+    background: transparent;
+    padding: 32px;
+
+    .ant-drawer-header {
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        left: -16px;
+
+        .ant-drawer-header-title {
+            flex: unset;
+            button {
+                margin-block: 16px;
+                margin-inline: 0;
+                padding: 8px;
+                border-radius: 50%;
+                aspect-ratio: 1;
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+
+    .ant-drawer-body {
+        background: linear-gradient($border, $border), $dark;
+        border-radius: 20px;
+        min-width: 320px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        align-items: center;
+    }
+}

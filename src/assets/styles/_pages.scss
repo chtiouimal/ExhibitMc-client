@@ -1,0 +1,63 @@
+.mc-page {
+    height: 100%;
+    width: 100vw;
+    padding-top: 144px;
+    background-color: transparent;
+    section {
+        padding: 0 38px;
+        display: flex;
+        flex-direction: column;
+        gap: 128px;
+        h4 {
+            opacity: 0.8;
+        }
+        p {
+            opacity: 0.6;
+        }
+        .mc-desciption {
+            display: flex;
+            gap: 32;
+            flex-wrap: wrap;
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 32px;
+            }
+        }
+        p {
+            max-width: 600px;
+        }
+    }
+}
+
+.mc-model-list {
+    header, .ant-radio-group {
+        max-width: 824px;
+        margin-inline: auto;
+    }
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-block: 32px;
+    }
+    .ant-radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        .ant-radio-wrapper {
+            margin-inline-end: 0;
+            span {
+                padding-inline-start: 0;
+                padding-inline-end: 0;
+            }
+            .ant-radio {
+                padding: 12px;
+                background-color: $dark;
+            }
+        }
+    }
+}

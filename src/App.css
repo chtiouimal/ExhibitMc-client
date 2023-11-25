@@ -140,7 +140,6 @@ a.active {
 }
 /* *** layouts *** */
 .mc-main-layout {
-  position: relative;
   min-height: 100vh;
 }
 .mc-main-layout .mc-main-layout--left, .mc-main-layout .mc-main-layout--right {
@@ -165,7 +164,7 @@ a.active {
 /* *** pages *** */
 .mc-page {
   height: 100%;
-  width: 100vw;
+  width: 90vw;
   padding-top: 144px;
   background-color: transparent;
 }
@@ -203,7 +202,7 @@ a.active {
 .mc-model-list header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-block: 32px;
 }
@@ -565,7 +564,7 @@ input::placeholder {
 .mc-card-light {
   position: relative;
   max-width: 166px;
-  padding: 16px;
+  padding: 16px 4px;
 }
 .mc-card-light .mc-radio {
   position: absolute;

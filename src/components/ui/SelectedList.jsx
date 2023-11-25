@@ -24,7 +24,7 @@ const SelectedList = () => {
   },[loading])
 
   return (
-    <header className="mc-selected-list" style={{display: "flex", gap: 8, marginBottom: 64}}>
+    <header className="mc-selected-list" style={{display: "flex", gap: 8, overflowY: "hidden"}}>
         {
          loading ? new Array(4).fill(null).map((_,i) => <Skeleton.Image className="mc-card-loading" key={i + 4} active={true} />) 
             :

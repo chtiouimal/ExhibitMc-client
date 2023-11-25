@@ -47,7 +47,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 16px;
         .ant-radio-wrapper {
             margin-inline-end: 0;
             span {
@@ -60,4 +59,27 @@
             }
         }
     }
+}
+
+.mc-selected-list {
+    overflow: auto;
+    .mc-card {
+        &:first-child {
+            margin-left: 32px;
+        }
+        &:last-child {
+            margin-right: 32px;
+        }
+    }
+}
+
+.mc-selected-list::-webkit-scrollbar {
+    display: none;
+}
+
+.mc-selected-list {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }

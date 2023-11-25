@@ -80,7 +80,7 @@ const ModelsList = () => {
 
   return (
     <div className="mc-model-list">
-      <header>
+      {/* <header style={{ display: "none"}}>
         <Search
           className="mc-search-input"
           placeholder="Search by song title"
@@ -96,7 +96,7 @@ const ModelsList = () => {
             <Radio.Button className="mc-radio-filter-btn" value="artist">Artist</Radio.Button>
           </Radio.Group>
         </div>
-      </header>
+      </header> */}
         <Radio.Group onChange={onChange} value={selectedItem}>
             {
               loading && list.length === 0 ? 

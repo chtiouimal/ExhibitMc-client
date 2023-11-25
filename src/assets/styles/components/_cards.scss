@@ -6,6 +6,7 @@
     gap: 8px;
     position: relative;
     width: 200px;
+    min-width: 200px;
     height: 250px;
     border-radius: 20px;
     border: 1px solid $border;
@@ -114,8 +115,8 @@
     position: relative;
     .mc-radio {
             position: absolute;
-            top: -20px;
-            right: -8px;
+            top: 0;
+            right: 0;
             z-index: 1;
     }
     h6 {
@@ -126,9 +127,8 @@
         font: $tiny-text;
     }
 
-    max-width: 150px;
-    margin-bottom: 16px;
-    position: relative;
+    max-width: 166px;
+    padding: 16px;
 
     .mc-checkbox {
         position: absolute;

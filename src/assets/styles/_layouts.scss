@@ -1,6 +1,6 @@
 .mc-main-layout {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     .mc-main-layout--left, .mc-main-layout--right {
         position: fixed;
         height: 80px;

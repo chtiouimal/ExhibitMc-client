@@ -122,9 +122,10 @@ canvas {
 }
 
 .mc-floating {
-    position: fixed;
+    position: sticky;
     bottom: 32px;
-    right: 32px;
+    margin-left: auto;
+    margin-right: 32px;
 }
 
 a.active {

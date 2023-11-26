@@ -5,9 +5,11 @@ import ArtCover from "./ArtCover";
 import { AudioPlayerContext } from "../../contexts/AudioPlayerContext";
 import { MODEL_CONFIG } from "../../constants/canvas.config";
 import Record from "./Record";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Model = ({index,data}) => {
   const {playerContext, setPlayerContext} = useContext(AudioPlayerContext);
+  const {width} = useWindowSize();
   const [clicked, setClicked] = useState(false)
 
   const group = useRef();
@@ -46,7 +48,7 @@ const Model = ({index,data}) => {
         ref={group}
         position={position}
         rotation={rotation}
-        scale={0.5}
+        scale={width > 580 ? 0.5 : width > 430 ? 0.4 : 0.3} 
         onClick={handleClick}
       >
         <ArtCover clicked={playerContext.trackIndex === index && clicked} img={coverArt} />

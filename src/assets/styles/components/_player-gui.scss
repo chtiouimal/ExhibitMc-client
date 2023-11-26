@@ -1,7 +1,9 @@
 .mc-audioplayer-gui {
     position: fixed;
     bottom: 32px;
-    left: 32px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
     z-index: 1;
     height: 80px;
     background-color: $dark;
@@ -10,6 +12,7 @@
     align-items: center;
     padding: 8px;
     gap: 8px;
+    width: 348px;
     .mc-audioplayer-img {
         cursor: pointer;
         position: relative;

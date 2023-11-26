@@ -735,7 +735,9 @@ input::placeholder {
 .mc-audioplayer-gui {
   position: fixed;
   bottom: 32px;
-  left: 32px;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
   z-index: 1;
   height: 80px;
   background-color: #060504;
@@ -744,6 +746,7 @@ input::placeholder {
   align-items: center;
   padding: 8px;
   gap: 8px;
+  width: 348px;
 }
 .mc-audioplayer-gui .mc-audioplayer-img {
   cursor: pointer;

@@ -13,7 +13,7 @@ const AudioPlayerGUI = () => {
     <div className="mc-audioplayer-gui">
         <div className="mc-audioplayer-img" onClick={handleClick}>
             <img src={playerContext.selectedTrack.coverArt} className={playerContext.isPlaying ? "mc-rotate-animation" : ""} alt={playerContext.selectedTrack.songName} />
-            {playerContext.isPlaying ? <PauseOutlined /> : <CaretRightOutlined />}
+            <span>{playerContext.isPlaying ? <PauseOutlined /> : <CaretRightOutlined />}</span>
         </div>
         <div className="mc-audioplayer-details">
             <h4>{playerContext.selectedTrack.songName}</h4>

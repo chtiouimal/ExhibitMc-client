@@ -125,7 +125,7 @@ canvas {
 .mc-floating {
   position: sticky;
   bottom: 32px;
-  margin-left: auto;
+  margin-left: calc(100vw - 120px);
   margin-right: 32px;
   z-index: 9;
 }

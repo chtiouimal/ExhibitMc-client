@@ -102,7 +102,7 @@ const ModelsList = () => {
               loading && list.length === 0 ? 
                 new Array(10).fill(null).map((_,i) => <Skeleton.Image className="mc-card-loading-light" key={i + 4} active={true} />) 
               : 
-                list?.map((e,i) => <ListItem model={e} key={i} />)
+                list?.map((e,i) => <ListItem model={e} index={i} key={i} />)
             }
         </Radio.Group>
         <button className="mc-btn mc-btn-primary mc-btn-round mc-floating" onClick={settingsContext.checkmode ? handleSelection : addNewSong}>{settingsContext.checkmode ? <CheckOutlined /> : <PlusOutlined />}</button>

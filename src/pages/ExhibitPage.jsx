@@ -21,7 +21,7 @@ const ExhibitPage = () => {
   },[loading])
 
   return (
-    <AudioContextProvider data={selectedList} wait={loading}>      
+    <AudioContextProvider>      
       <Canvas>
         <EnvPreset />
         <ControlsPreset />

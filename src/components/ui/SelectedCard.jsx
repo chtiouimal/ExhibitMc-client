@@ -3,16 +3,19 @@ import { CaretRightOutlined, PauseOutlined,CheckOutlined, HeartFilled, CloseOutl
 import EmptyCard from "./EmptyCard"
 import { SettingsContext } from "../../contexts/SettingsContext"
 import useAxios from "../../hooks/useAxios"
+import { AudioPlayerContext } from "../../contexts/AudioPlayerContext"
 
 const SelectedCard = ({model,position}) => {
   const {settingsContext, setSettingsContext} = useContext(SettingsContext)
+  const {playerContext, setPlayerContext} = useContext(AudioPlayerContext);
   const {data,loading, error, put} = useAxios()
   const [play, setPlay] = useState(false)
   const audioRef = useRef(null);
 
   const handlePlay = () => {
     setPlay(!play)
-    !play ? audioRef.current.play() : audioRef.current.pause();
+    let player = {...playerContext, isPlaying: !play, trackIndex: position, selectedTrack: model, type: "SELECTED"}
+    setPlayerContext(player)
   }
 
   const handleCheckMode = () => {
@@ -24,6 +27,13 @@ const SelectedCard = ({model,position}) => {
     setSettingsContext(prev => ({...prev, [`selected${position + 1}`]: null, removedItem: model._id}))
   }
   
+  useEffect(() => {
+    if (playerContext.isPlaying && playerContext.trackIndex === position && playerContext.type === "SELECTED") {
+      setPlay(true)
+    } else {
+      setPlay(false)
+    }
+  },[playerContext.isPlaying, playerContext.trackIndex])
 
   return (
     model === null ? <EmptyCard clickAction={handleCheckMode} /> : 

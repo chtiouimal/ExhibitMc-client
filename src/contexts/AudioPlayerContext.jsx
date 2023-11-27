@@ -7,6 +7,7 @@ const AudioContextProvider = ({children}) => {
       trackIndex: -1,
       isPlaying: false,
       selectedTrack: {},
+      type: "SELECTED"
     })
 
     const value = useMemo(() => ({ playerContext, setPlayerContext }),[playerContext])

@@ -1,13 +1,16 @@
 .mc-drawer.ant-drawer-content {
     background: transparent;
     padding: 32px;
+    .ant-drawer-wrapper-body {
+        position: relative;
+    }
 
     .ant-drawer-header {
         padding: 0;
         display: flex;
         justify-content: flex-end;
         position: absolute;
-        left: -16px;
+        right: 0;
 
         .ant-drawer-header-title {
             flex: unset;
@@ -29,7 +32,7 @@
         min-width: 320px;
         display: flex;
         flex-direction: column;
-        gap: 64px;
+        gap: 32px;
         align-items: center;
     }
 }

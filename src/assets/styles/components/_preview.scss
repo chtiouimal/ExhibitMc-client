@@ -8,8 +8,8 @@
     align-items: center;
 
     .mc-model-img {
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
         position: relative;
         display: flex;
         align-items: center;
@@ -26,13 +26,13 @@
             border-radius: 10px;
 
             &:first-child {
-                left: -32px;
+                left: -30px;
                 z-index: 2;
                 background: linear-gradient($border, $border), $dark;
             }
 
             &:last-child {
-                right: -32px;
+                right: -16px;
                 z-index: 1;
                 height: 95%;
                 width: 95%;

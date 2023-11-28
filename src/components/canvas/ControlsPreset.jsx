@@ -15,6 +15,7 @@ const ControlsPreset = (props) => {
     <OrbitControls
       enablePan={false}
       enableZoom={false}
+      maxPolarAngle={Math.PI / 1.6}
       ref={ref}
       target={[0, 0, 0]}
       {...props}

@@ -14,6 +14,7 @@ const ControlsPreset = (props) => {
   return (
     <OrbitControls
       enablePan={false}
+      enableZoom={false}
       ref={ref}
       target={[0, 0, 0]}
       {...props}

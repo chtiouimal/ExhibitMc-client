@@ -19,7 +19,7 @@ const Model = ({index,data}) => {
 
   const handleClick = async () => {
     setClicked(!clicked)
-    let player = {...playerContext, isPlaying: !clicked, trackIndex: index, selectedTrack: data}
+    let player = {...playerContext, isPlaying: !clicked, trackIndex: index, selectedTrack: data,type: "SELECTED"}
     setPlayerContext(player)
   };
 

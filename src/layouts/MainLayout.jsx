@@ -1,21 +1,15 @@
-import { NavLink, Outlet } from "react-router-dom"
-import LOGO from "../assets/mc_logo.svg"
+import { Outlet } from "react-router-dom"
+import AudioContextProvider from "../contexts/AudioPlayerContext"
+import { NavigationHeader } from "../components"
 
 const MainLayout = () => {
   return (
-    <main className="mc-main-layout">
-        <div className="mc-main-layout--left">
-            <NavLink to="">
-                <img src={LOGO} alt="mc_logo" />
-            </NavLink>
-        </div>
-        <div className="mc-main-layout--right">
-            <NavLink to="/settings">
-                Settings
-            </NavLink>
-        </div>
-        <Outlet />
-    </main>
+    <AudioContextProvider>
+        <main className="mc-main-layout">
+            <NavigationHeader />
+            <Outlet />
+        </main>
+    </AudioContextProvider>
   )
 }
 

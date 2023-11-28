@@ -10,7 +10,6 @@ const SelectedCard = ({model,position}) => {
   const {playerContext, setPlayerContext} = useContext(AudioPlayerContext);
   const {data,loading, error, put} = useAxios()
   const [play, setPlay] = useState(false)
-  const audioRef = useRef(null);
 
   const handlePlay = () => {
     setPlay(!play)
@@ -41,7 +40,6 @@ const SelectedCard = ({model,position}) => {
       <div className="mc-music-img">
         <img src={model?.coverArt} alt={model?.songName} />
       </div>
-      <audio ref={audioRef} src={model.music} />
       <div className="mc-music-details">
         <header>
           <span style={{fontSize: 12}}><HeartFilled /> {model?.likes}</span>

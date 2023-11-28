@@ -1,11 +1,10 @@
 import { ModelsList, SelectedList } from "../components"
-import AudioContextProvider from "../contexts/AudioPlayerContext"
 import SettingsContextProvider from "../contexts/SettingsContext"
 
 const SelectionPage = () => {
   return (
     <SettingsContextProvider>
-      <AudioContextProvider>
+      {/* <AudioContextProvider> */}
         <div className="mc-page">
           <div style={{display: "flex", justifyContent: "center", width: "100%", position: "absolute"}}>
             <SelectedList />
@@ -14,7 +13,7 @@ const SelectionPage = () => {
             <ModelsList />
           </div>
         </div>
-      </AudioContextProvider>
+      {/* </AudioContextProvider> */}
     </SettingsContextProvider>
   )
 }

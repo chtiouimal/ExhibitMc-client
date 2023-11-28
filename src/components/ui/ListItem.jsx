@@ -8,7 +8,6 @@ const ListItem = ({model,index}) => {
   const {settingsContext} = useContext(SettingsContext)
   const {playerContext, setPlayerContext} = useContext(AudioPlayerContext);
   const [play, setPlay] = useState(false)
-  const audioRef = useRef(null);
 
   const handlePlay = () => {
     setPlay(!play)

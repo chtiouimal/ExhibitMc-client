@@ -6,6 +6,7 @@ export {default as SelectedList} from "./ui/SelectedList"
 export {default as ModelPreview} from "./ui/ModelPreview"
 export {default as BackDrop} from "./ui/BackDrop"
 export {default as AudioPlayerGUI} from "./ui/AudioPlayerGUI"
+export {default as NavigationHeader} from "./ui/NavigationHeader"
 
 /* *** canvas *** */
 export {default as ControlsPreset} from "./canvas/ControlsPreset"

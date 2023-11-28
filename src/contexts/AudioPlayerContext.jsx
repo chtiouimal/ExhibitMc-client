@@ -1,4 +1,5 @@
 import { createContext, useEffect, useMemo, useRef, useState } from "react";
+import { useLocation } from 'react-router-dom';
 
 export const AudioPlayerContext = createContext();
 
@@ -7,10 +8,12 @@ const AudioContextProvider = ({children}) => {
       trackIndex: -1,
       isPlaying: false,
       selectedTrack: {},
-      type: "SELECTED"
+      type: "SELECTED",
     })
 
     const value = useMemo(() => ({ playerContext, setPlayerContext }),[playerContext])
+    
+    const location = useLocation();
 
     const audioRef = useRef();
     const intervalRef = useRef();
@@ -62,6 +65,13 @@ const AudioContextProvider = ({children}) => {
         audioRef.current.pause();
       }
     }, [playerContext.isPlaying]);
+
+    useEffect(() => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        setPlayerContext(prev => ({...prev, isPlaying: false}));
+      }  
+    }, [location.pathname]); 
 
   return (
     <AudioPlayerContext.Provider value={value}>

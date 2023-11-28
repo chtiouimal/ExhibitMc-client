@@ -1,7 +1,6 @@
 import { Canvas } from "@react-three/fiber"
 import { AudioPlayerGUI, BackDrop, ControlsPreset, EnvPreset } from "../components"
 import { Grid } from "@react-three/drei"
-import AudioContextProvider from "../contexts/AudioPlayerContext"
 import useAxios from "../hooks/useAxios"
 import { useEffect, useState } from "react"
 import Model from "../components/canvas/Model"
@@ -21,7 +20,8 @@ const ExhibitPage = () => {
   },[loading])
 
   return (
-    <AudioContextProvider>      
+    // <AudioContextProvider>    
+    <>  
       <Canvas>
         <EnvPreset />
         <ControlsPreset />
@@ -31,7 +31,8 @@ const ExhibitPage = () => {
       </Canvas>
       <BackDrop />
       <AudioPlayerGUI />
-    </AudioContextProvider>
+    </>
+    // </AudioContextProvider>
   )
 }
 

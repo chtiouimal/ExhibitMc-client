@@ -26,6 +26,7 @@ const ModelsList = () => {
     })
     const [colors,setColors] = useState([])
     const [searchQuery, setSearchQuery] = useState("")
+    const [refetch, setReftech] = useState(true)
 
     const addNewSong = () => {
         setOpenDrawer(true);
@@ -69,8 +70,14 @@ const ModelsList = () => {
     };
     
     useEffect(() => {
+      if (refetch) {
         get(import.meta.env.VITE_MUSIC)
-    },[])
+      }
+
+      return () => {
+        setReftech(false)
+      }
+    },[refetch])
 
     useEffect(() => {
         if(!loading && data.length>0) {
@@ -115,7 +122,7 @@ const ModelsList = () => {
               currentForm === 0 ? 
                 <NewModelForm setCurrentForm={setCurrentForm} newTrack={newTrack} setNewTrack={setNewTrack} setColors={setColors} /> 
               : 
-                <SubmitNewModelForm colors={colors} setNewTrack={setNewTrack} newTrack={newTrack} setPlaylist={setList} setCurrentForm={setCurrentForm} onClose={onClose}/>
+                <SubmitNewModelForm setReftech={setReftech} colors={colors} setNewTrack={setNewTrack} newTrack={newTrack} setPlaylist={setList} setCurrentForm={setCurrentForm} onClose={onClose}/>
             }
           </FormDrawer> 
         : null}

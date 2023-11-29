@@ -4,7 +4,6 @@ import SettingsContextProvider from "../contexts/SettingsContext"
 const SelectionPage = () => {
   return (
     <SettingsContextProvider>
-      {/* <AudioContextProvider> */}
         <div className="mc-page">
           <div style={{display: "flex", justifyContent: "center", width: "100%", position: "absolute"}}>
             <SelectedList />
@@ -13,7 +12,6 @@ const SelectionPage = () => {
             <ModelsList />
           </div>
         </div>
-      {/* </AudioContextProvider> */}
     </SettingsContextProvider>
   )
 }

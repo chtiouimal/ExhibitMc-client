@@ -48,7 +48,8 @@ const Model = ({index,data}) => {
         ref={group}
         position={position}
         rotation={rotation}
-        scale={width > 580 ? 0.5 : width > 430 ? 0.4 : 0.3} 
+        // scale={width > 580 && clicked ? 0.5 : width > 430 && clicked ? 0.4 : 0.3} 
+        scale={clicked ? width > 430 ? 0.5 : 0.3 : 0.5}
         onClick={handleClick}
       >
         <ArtCover clicked={playerContext.trackIndex === index && clicked} img={coverArt} />

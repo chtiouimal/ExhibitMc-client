@@ -127,6 +127,8 @@ canvas {
     margin-left: calc(100vw - 120px);
     margin-right: 32px;
     z-index: 9;
+    display: flex;
+    justify-content: flex-end;
 }
 
 a.active {

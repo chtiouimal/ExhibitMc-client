@@ -112,7 +112,9 @@ const ModelsList = () => {
                 list?.map((e,i) => <ListItem model={e} index={i} key={i} />)
             }
         </Radio.Group>
-        <button className="mc-btn mc-btn-primary mc-btn-round mc-floating" onClick={settingsContext.checkmode ? handleSelection : addNewSong}>{settingsContext.checkmode ? <CheckOutlined /> : <PlusOutlined />}</button>
+        <div className="mc-floating">
+          <button className="mc-btn mc-btn-primary mc-btn-round" onClick={settingsContext.checkmode ? handleSelection : addNewSong}>{settingsContext.checkmode ? <CheckOutlined /> : <PlusOutlined />}</button>
+        </div>
         {openDrawer ? 
           <FormDrawer openDrawer={openDrawer} onClose={onClose}>
             <div style={{backgroundColor: newTrack?.color && newTrack?.color !== "" ? newTrack.color : "transparent", width: "100%", borderRadius: 10}}>

@@ -70,6 +70,7 @@ const AudioContextProvider = ({children}) => {
       if (audioRef.current) {
         audioRef.current.pause();
         setPlayerContext(prev => ({...prev, isPlaying: false}));
+        startTimer();
       }  
     }, [location.pathname]); 
 

@@ -163,6 +163,64 @@ a.active {
   right: 32px;
 }
 
+.mc-empty-state {
+  height: 60vh;
+}
+.mc-empty-state .ant-modal-content {
+  background-color: #060504;
+  height: 100%;
+}
+.mc-empty-state .ant-modal-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.mc-empty-state .mc-empty-state-img {
+  height: 200px;
+  width: auto;
+}
+.mc-empty-state .mc-empty-state-img img {
+  height: 100%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mc-empty-state .mc-empty-state-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.mc-empty-state .mc-empty-state-desc * {
+  text-align: center;
+}
+.mc-empty-state .mc-empty-state-desc button {
+  margin-top: 16px;
+}
+
+.mc-page-loading {
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.mc-page-loading svg {
+  fill: #E1C258 !important;
+  height: 48px;
+  width: 48px;
+}
+
+div:has(div > canvas) {
+  width: 100vw;
+}
+
 /* *** pages *** */
 .mc-page {
   height: 100%;

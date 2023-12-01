@@ -2,20 +2,17 @@ import { Canvas } from "@react-three/fiber"
 import { AudioPlayerGUI, BackDrop, ControlsPreset, EnvPreset } from "../components"
 import { Grid } from "@react-three/drei"
 import useAxios from "../hooks/useAxios"
-import { useContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import Model from "../components/canvas/Model"
 import { Modal } from "antd"
 import IMG from "../assets/empty-state.svg"
 import { useNavigate } from "react-router-dom"
 import {LoadingOutlined} from "@ant-design/icons"
-import { AudioPlayerContext } from "../contexts/AudioPlayerContext"
 
 const ExhibitPage = () => {
   const {data, loading, error, get} = useAxios()
   const [selectedList, setSelectedList] = useState([])
   const [emptyState, setEmptyState] = useState(false);
-
-  const {playerContext} = useContext(AudioPlayerContext)
 
   const navigate = useNavigate()
   
@@ -36,10 +33,6 @@ const ExhibitPage = () => {
     setEmptyState(false)
     navigate("/settings")
   }
-
-  useEffect(() => {
-    console.log(playerContext)
-  },[playerContext])
 
   return (   
     <>  

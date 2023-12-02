@@ -13,7 +13,6 @@ const NewModelForm = ({newTrack, setNewTrack, setCurrentForm, setColors}) => {
   }
   
   const onFinish = (values) => {
-    // console.log('success:', values);
     setNewTrack({...values, color: ""})
     setCurrentForm(1)
   };

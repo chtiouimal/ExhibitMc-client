@@ -117,9 +117,14 @@ const ModelsList = () => {
         </div>
         {openDrawer ? 
           <FormDrawer openDrawer={openDrawer} onClose={onClose}>
-            <div style={{backgroundColor: newTrack?.color && newTrack?.color !== "" ? newTrack.color : "transparent", width: "100%", borderRadius: 10}}>
-              <ModelPreview img={newTrack?.coverArt} />
-            </div>
+            {
+              currentForm !== 0 ? 
+                <div style={{backgroundColor: newTrack?.color && newTrack?.color !== "" ? newTrack.color : "transparent", width: "100%", borderRadius: 10}}>
+                  <ModelPreview img={newTrack?.coverArt} />
+                </div> 
+              : 
+                null
+            }
             {
               currentForm === 0 ? 
                 <NewModelForm setCurrentForm={setCurrentForm} newTrack={newTrack} setNewTrack={setNewTrack} setColors={setColors} /> 

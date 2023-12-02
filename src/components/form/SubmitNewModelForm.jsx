@@ -3,10 +3,8 @@ import { ArrowLeftOutlined, CheckOutlined } from "@ant-design/icons"
 import { Radio } from "antd"
 import useAxios from "../../hooks/useAxios"
 
-const SubmitNewModelForm = ({colors, setCurrentForm, newTrack, setNewTrack, setPlaylist, onClose, setReftech}) => {
-//   const [selectedColor, setSelectedColor] = useState("")
+const SubmitNewModelForm = ({colors, setCurrentForm, newTrack, setNewTrack, onClose, setReftech}) => {
   const {data, loading, post} = useAxios()
-  const [sendReq, setSendReq] = useState(false)
   
   const onColorChange = (e) => {
     setNewTrack(prev => ({...prev, color: e.target.value}))

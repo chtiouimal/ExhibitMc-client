@@ -24,18 +24,21 @@ const SelectedList = () => {
   },[loading])
 
   return (
-    <header className="mc-selected-list" style={{display: "flex", gap: 8, overflowY: "hidden"}}>
-        {
-         loading ? new Array(4).fill(null).map((_,i) => <Skeleton.Image className="mc-card-loading" key={i + 4} active={true} />) 
-            :
-          <>
-            <SelectedCard model={settingsContext.selected1} position={0} />
-            <SelectedCard model={settingsContext.selected2} position={1} />
-            <SelectedCard model={settingsContext.selected3} position={2} />
-            <SelectedCard model={settingsContext.selected4} position={3} />
-          </> 
-        }
-    </header>
+    <div>
+      <span style={{width: "100%", display: "flex", justifyContent: "flex-end", marginBottom: 16, padding: "0 32px"}}>{!loading ? `0${data.length}` : "00"} / 04</span>
+      <header className="mc-selected-list" style={{display: "flex", gap: 8, overflowY: "hidden", maxWidth: "100vw"}}>
+          {
+          loading ? new Array(4).fill(null).map((_,i) => <Skeleton.Image className="mc-card-loading" key={i + 4} active={true} />) 
+              :
+            <>
+              <SelectedCard model={settingsContext.selected1} position={0} />
+              <SelectedCard model={settingsContext.selected2} position={1} />
+              <SelectedCard model={settingsContext.selected3} position={2} />
+              <SelectedCard model={settingsContext.selected4} position={3} />
+            </> 
+          }
+      </header>
+    </div>
   )
 }
 

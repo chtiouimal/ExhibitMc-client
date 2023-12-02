@@ -22,7 +22,7 @@ const NewModelForm = ({newTrack, setNewTrack, setCurrentForm, setColors}) => {
   };
 
   return (
-    <div style={{width: "100%", height: "100%", display: "flex", flexDirection: "column"}}>
+    <div style={{width: "100%", height: "100%", display: "flex", flexDirection: "column", marginTop: 60}}>
       <Form
         form={form}
         onFinish={onFinish}

@@ -34,7 +34,7 @@ Explore Exhibit Box MC's demo app, highlighting the power of our 3D portfolio pl
 
 ## Tutorial (How to use)
 
-**Select a song to be showcased**
+**Add A SONG TO THE SHOWCASE LIST**
 
 1. Go to the settings page and click on one of the empty placeholders
    ![go_the_settings_page](https://firebasestorage.googleapis.com/v0/b/music-gallery-da2d1.appspot.com/o/Exhibit%20MC%20tutorial%2FGroup%2010.jpg?alt=media&token=67519505-2420-48a0-80b5-a2a73249e062)
@@ -46,6 +46,11 @@ Explore Exhibit Box MC's demo app, highlighting the power of our 3D portfolio pl
    - in the music list you will see that each song card had a select icon on the top right
    - notice that the plus (+) button is changed to a check (✔) button
 
-   so after clicking on the empty placeholder, you can select any song by clicking on the top right icon and then you click on the check button to confirm selection.
+   so after clicking on the empty placeholder, you can select any song by clicking on the top right icon and then you click on the check button to confirm your selection.
 
    ![select_song_and_confirm](https://firebasestorage.googleapis.com/v0/b/music-gallery-da2d1.appspot.com/o/Exhibit%20MC%20tutorial%2FGroup%2013.jpg?alt=media&token=60d767d2-bda6-47c3-8a42-55372d984f4e)
+
+**REMOVE A SONG FROM THE SHOWCASE LIST**
+
+1. On the selected list section in the settings page you will see that there is an (X) button on the top right of the card and when you click on it the song will be removed form the showcase list
+   ![remove_song_from_showcase](https://firebasestorage.googleapis.com/v0/b/music-gallery-da2d1.appspot.com/o/Exhibit%20MC%20tutorial%2FGroup%2014.jpg?alt=media&token=4e15d792-2db4-45dc-aa72-d01e218ed4dc)

@@ -34,4 +34,9 @@ Explore Exhibit Box MC's demo app, highlighting the power of our 3D portfolio pl
 
 ## Tutorial (How to use)
 
-coming soon...
+**Select a song to be showcased**
+
+1. Go to the settings page and click on one of the empty placeholders
+   ![go_the_settings_page](https://firebasestorage.googleapis.com/v0/b/music-gallery-da2d1.appspot.com/o/Exhibit%20MC%20tutorial%2FGroup%2010.jpg?alt=media&token=67519505-2420-48a0-80b5-a2a73249e062)
+
+   ![click_on_the_empty_placeholder](https://firebasestorage.googleapis.com/v0/b/music-gallery-da2d1.appspot.com/o/Exhibit%20MC%20tutorial%2FGroup%2011.jpg?alt=media&token=b899876c-a4e1-4720-a005-151d88d55aa0)

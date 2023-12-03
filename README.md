@@ -12,7 +12,7 @@ Explore Exhibit Box MC's demo app, highlighting the power of our 3D portfolio pl
 
 [Click here for the demo](https://exhibit-box-mc.netlify.app)
 
-## Tutorial (How to use)
+## Instructions
 
 **Exhibit page instructions**
 
@@ -31,3 +31,7 @@ Explore Exhibit Box MC's demo app, highlighting the power of our 3D portfolio pl
 2. Section: the list of all the songs added.
 3. Action: sort the list of songs added.
 4. Action: open the dialogue to add new song.
+
+## Tutorial (How to use)
+
+coming soon...

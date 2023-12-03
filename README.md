@@ -10,7 +10,7 @@ Over all Exhibit Box MC, Provide users with the ability to create their virtual 
 
 Explore Exhibit Box MC's demo app, highlighting the power of our 3D portfolio platform through the mesmerizing world of music.
 
-[Click here for the demo](https://exhibit-box-mc.netlify.app){:target="\_blank"}
+<a href="https://exhibit-box-mc.netlify.app" target="_blank">Click here for the demo</a>
 
 ## Instructions
 

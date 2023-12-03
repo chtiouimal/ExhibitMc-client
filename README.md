@@ -1,8 +1,13 @@
-# React + Vite
+# Exhibit Box MC
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Establish a social networking platform for artists to build and share their portfolios. Artists can connect with each other, receive feedback, and potentially get discovered by recruiters looking for unique talents in various creative fields.
 
-Currently, two official plugins are available:
+It also allow users to curate their own collections within the platform, showcasing their best work. This feature enables artists to present a cohesive narrative about their skills and style, making it easier for recruiters and collaborators to find and appreciate their talent.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Over all Exhibit Box MC, Provide users with the ability to create their virtual art galleries or as u may say portfoilo. This feature allows artists to customize the environment in which their work is displayed, providing a unique and personalized experience for viewers.
+
+## Demo
+
+Explore Exhibit Box MC's demo app, highlighting the power of our 3D portfolio platform through the mesmerizing world of music.
+
+[click here for the demo](https://exhibit-box-mc.netlify.app)

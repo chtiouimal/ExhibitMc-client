@@ -40,3 +40,12 @@ Explore Exhibit Box MC's demo app, highlighting the power of our 3D portfolio pl
    ![go_the_settings_page](https://firebasestorage.googleapis.com/v0/b/music-gallery-da2d1.appspot.com/o/Exhibit%20MC%20tutorial%2FGroup%2010.jpg?alt=media&token=67519505-2420-48a0-80b5-a2a73249e062)
 
    ![click_on_the_empty_placeholder](https://firebasestorage.googleapis.com/v0/b/music-gallery-da2d1.appspot.com/o/Exhibit%20MC%20tutorial%2FGroup%2011.jpg?alt=media&token=b899876c-a4e1-4720-a005-151d88d55aa0)
+
+2. You'll notice two things here:
+
+   - in the music list you will see that each song card had a select icon on the top right
+   - notice that the plus (+) button is changed to a check (✔) button
+
+   so after clicking on the empty placeholder, you can select any song by clicking on the top right icon and then you click on the check button to confirm selection.
+
+   ![select_song_and_confirm](https://firebasestorage.googleapis.com/v0/b/music-gallery-da2d1.appspot.com/o/Exhibit%20MC%20tutorial%2FGroup%2013.jpg?alt=media&token=60d767d2-bda6-47c3-8a42-55372d984f4e)

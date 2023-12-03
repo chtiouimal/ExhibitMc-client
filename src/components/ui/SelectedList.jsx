@@ -25,7 +25,7 @@ const SelectedList = () => {
 
   return (
     <div>
-      <span style={{width: "100%", display: "flex", justifyContent: "flex-end", marginBottom: 16, padding: "0 32px"}}>{!loading ? `0${data.length}` : "00"} / 04</span>
+      <span style={{width: "100%", display: "flex", justifyContent: "flex-end", padding: "0 46px 8px"}}>{!loading ? `0${data.length}` : "00"} / 04</span>
       <header className="mc-selected-list" style={{display: "flex", gap: 8, overflowY: "hidden", maxWidth: "100vw"}}>
           {
           loading ? new Array(4).fill(null).map((_,i) => <Skeleton.Image className="mc-card-loading" key={i + 4} active={true} />) 

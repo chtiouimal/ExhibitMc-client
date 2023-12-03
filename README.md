@@ -10,4 +10,8 @@ Over all Exhibit Box MC, Provide users with the ability to create their virtual 
 
 Explore Exhibit Box MC's demo app, highlighting the power of our 3D portfolio platform through the mesmerizing world of music.
 
-[click here for the demo](https://exhibit-box-mc.netlify.app)
+[Click here for the demo](https://exhibit-box-mc.netlify.app)
+
+## Tutorial
+
+![instruction_how_to_use](https://firebasestorage.googleapis.com/v0/b/music-gallery-da2d1.appspot.com/o/Exhibit%20MC%20tutorial%2FGroup%205.jpg?alt=media&token=baf527b5-ce34-4996-bb0a-dfb80cdc9a4b)

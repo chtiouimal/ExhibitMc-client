@@ -14,6 +14,6 @@ Explore Exhibit Box MC's demo app, highlighting the power of our 3D portfolio pl
 
 ## Tutorial
 
-** Instruction (How to use) **
+**Instruction (How to use)**
 
 ![instruction_how_to_use](https://firebasestorage.googleapis.com/v0/b/music-gallery-da2d1.appspot.com/o/Exhibit%20MC%20tutorial%2FGroup%205.jpg?alt=media&token=baf527b5-ce34-4996-bb0a-dfb80cdc9a4b)

@@ -6,6 +6,7 @@ import { AudioPlayerContext } from "../../contexts/AudioPlayerContext";
 import { MODEL_CONFIG } from "../../constants/canvas.config";
 import Record from "./Record";
 import useWindowSize from "../../hooks/useWindowSize";
+import LoadingCube from "./LoadingCube";
 
 const Model = ({index,data}) => {
   const {playerContext, setPlayerContext} = useContext(AudioPlayerContext);
@@ -43,12 +44,11 @@ const Model = ({index,data}) => {
   },[playerContext.isPlaying])
 
   return (
-    <Suspense>
+    <Suspense fallback={<LoadingCube position={position} rotation={rotation} scale={0.09} />}>
       <group
         ref={group}
         position={position}
         rotation={rotation}
-        // scale={width > 580 && clicked ? 0.5 : width > 430 && clicked ? 0.4 : 0.3} 
         scale={clicked ? width > 430 ? 0.5 : 0.3 : 0.5}
         onClick={handleClick}
       >

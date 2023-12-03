@@ -20,6 +20,7 @@ const Record = ({clicked}) => {
     });
     return null;
   });
+
   return (
     <mesh
       ref={record}

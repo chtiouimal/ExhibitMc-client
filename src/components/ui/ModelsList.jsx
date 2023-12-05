@@ -107,7 +107,11 @@ const ModelsList = () => {
         <Radio.Group onChange={onChange} value={selectedItem}>
             {
               loading && list.length === 0 ? 
-                new Array(10).fill(null).map((_,i) => <Skeleton.Image className="mc-card-loading-light" key={i + 4} active={true} />) 
+                new Array(10).fill(null).map((_,i) => <div className="mc-card-light">
+                  <Skeleton.Image className="mc-card-loading-light" key={i + 4} active={true} />
+                  <Skeleton.Input style={{height: 21}} active />
+                  <Skeleton.Input style={{height: 17}} active />
+                </div>) 
               : 
                 list?.map((e,i) => <ListItem model={e} index={i} key={i} />)
             }

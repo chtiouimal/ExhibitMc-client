@@ -88,6 +88,7 @@ const ModelsList = () => {
   return (
     <div className="mc-model-list">
       <header>
+        // search bar inactive at the moment
         {/* <Search
           className="mc-search-input"
           placeholder="Search by song title"

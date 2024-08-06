@@ -38,7 +38,7 @@ const SelectedCard = ({model,position}) => {
     model === null ? <EmptyCard clickAction={handleCheckMode} /> : 
     <div className="mc-card">
       <div className="mc-music-img">
-        <img src={model?.coverArt} alt={model?.songName} />
+        <img src={model?.thumbnail ? model?.thumbnail : model.coverArt} alt={model?.songName} />
       </div>
       <div className="mc-music-details">
         <header>

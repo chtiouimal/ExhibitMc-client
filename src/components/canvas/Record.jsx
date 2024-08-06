@@ -24,7 +24,7 @@ const Record = ({clicked}) => {
   return (
     <mesh
       ref={record}
-      position={[0, 0.5, 0]}
+      position={[0, -10, 0]}
       geometry={circleGeo({ r: 4.5, s: 64 })}
     >
       <meshStandardMaterial attach="material" map={discTexture} />

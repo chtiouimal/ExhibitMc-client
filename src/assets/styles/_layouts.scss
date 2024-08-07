@@ -18,6 +18,25 @@
     .mc-main-layout--right {
         right: 32px;
     }
+    .mc-main-layout--bottom-left, .mc-main-layout--bottom-right, .mc-main-layout--bottom-center {
+        position: fixed;
+        height: 80px;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        z-index: 9;
+    }
+    .mc-main-layout--bottom-left {
+        left: 32px;
+    }
+    .mc-main-layout--bottom-right {
+        right: 32px;
+    }
+    .mc-main-layout--bottom-center {
+        right: 50%;
+        transform: translateX(50%);
+    }
 }
 
 .mc-empty-state {

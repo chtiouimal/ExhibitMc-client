@@ -10,7 +10,7 @@ import NewModelForm from "../form/NewModelForm";
 import SubmitNewModelForm from "../form/SubmitNewModelForm";
 const { Search } = Input;
 
-const ModelsList = () => {
+const ModelsList = ({setCount}) => {
   const {settingsContext, setSettingsContext} = useContext(SettingsContext)
     const {data, loading, error, get, put} = useAxios();
     const [list, setList] = useState([])
@@ -44,6 +44,7 @@ const ModelsList = () => {
         setSettingsContext(prev => ({...prev, [`selected${settingsContext.itemPosition + 1}`]: {...selectedItem, position: settingsContext.itemPosition}, checkmode: false }))
         put(import.meta.env.VITE_SELECT, {musicId: selectedItem?._id, position: settingsContext.itemPosition})
         setSelectedItem(null)
+        setCount(prev => prev + 1)
       }
     }
 
@@ -107,7 +108,7 @@ const ModelsList = () => {
         <Radio.Group onChange={onChange} value={selectedItem}>
             {
               loading && list.length === 0 ? 
-                new Array(10).fill(null).map((_,i) => <div className="mc-card-light">
+                new Array(10).fill(null).map((_,i) => <div className="mc-card-light" key={i}>
                   <Skeleton.Image className="mc-card-loading-light" key={i + 4} active={true} />
                   <Skeleton.Input style={{height: 21}} active />
                   <Skeleton.Input style={{height: 17}} active />

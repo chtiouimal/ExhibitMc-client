@@ -1,4 +1,4 @@
-import { createContext, useEffect, useMemo, useRef, useState } from "react";
+import { createContext, useMemo, useState } from "react";
 
 export const SettingsContext = createContext();
 

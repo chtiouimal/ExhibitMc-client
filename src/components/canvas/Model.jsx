@@ -27,7 +27,7 @@ const Model = ({index,data}) => {
   useFrame((state) => {
     if (playerContext.trackIndex === index && clicked) {
       state.camera.lookAt(0, 0, 0);
-      state.camera.position.lerp(
+      state.camera?.position.lerp(
         new Vector3().set(viewPos.x, viewPos.y, viewPos.z),
         0.09,
       );
@@ -44,7 +44,8 @@ const Model = ({index,data}) => {
   },[playerContext.isPlaying])
 
   return (
-    <Suspense fallback={<LoadingModel position={position} rotation={rotation} scale={0.09} />}>
+    // <Suspense fallback={<LoadingModel index={index} scale={0.09} />}>
+    <Suspense fallback={null}>
       <group
         ref={group}
         position={position}

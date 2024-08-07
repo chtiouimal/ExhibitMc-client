@@ -12,7 +12,7 @@ const ArtCover = ({ clicked, img }) => {
 
   useFrame(() => {
     setTimeout(() => {
-      frame.current.position.lerp(vec, 0.1);
+      frame?.current?.position.lerp(vec, 0.1);
     });
     return null;
   });

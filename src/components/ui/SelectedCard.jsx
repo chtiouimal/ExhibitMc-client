@@ -5,7 +5,7 @@ import { SettingsContext } from "../../contexts/SettingsContext"
 import useAxios from "../../hooks/useAxios"
 import { AudioPlayerContext } from "../../contexts/AudioPlayerContext"
 
-const SelectedCard = ({model,position}) => {
+const SelectedCard = ({model,position,setCount}) => {
   const {settingsContext, setSettingsContext} = useContext(SettingsContext)
   const {playerContext, setPlayerContext} = useContext(AudioPlayerContext);
   const {data,loading, error, put} = useAxios()
@@ -24,6 +24,7 @@ const SelectedCard = ({model,position}) => {
   const handleUnselect = () => {
     put(import.meta.env.VITE_UNSELECT,{musicId: model._id})
     setSettingsContext(prev => ({...prev, [`selected${position + 1}`]: null, removedItem: model._id}))
+    setCount(prev => prev - 1)
   }
   
   useEffect(() => {

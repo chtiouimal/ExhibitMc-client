@@ -62,7 +62,14 @@ const AudioContextProvider = ({children}) => {
       if (playerContext.isPlaying) {
         audioRef.current.play();
       } else {
-        audioRef.current.pause();
+        if (audioRef.current !== undefined) {
+          audioRef.current.play().then(_ => {
+            audioRef.current.pause();
+          })
+          .catch(error => {
+            console.log("media is paused")
+          })
+        }
       }
     }, [playerContext.isPlaying]);
 

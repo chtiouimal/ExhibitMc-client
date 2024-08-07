@@ -2,11 +2,15 @@ import { Sphere } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
 import { useRef } from "react"
 import { Vector3 } from "three"
+import { MODEL_CONFIG } from "../../constants/canvas.config"
 
-const LoadingModel = (props) => {
+const LoadingModel = ({index, scale}) => {
     const one = useRef()
     const two = useRef()
     const three = useRef()
+
+    
+  const { position, rotation } = MODEL_CONFIG[index];
 
   const vec1 = new Vector3(-3, 0, 0);
   const vec2 = new Vector3(0, 0, 0);
@@ -29,7 +33,7 @@ const LoadingModel = (props) => {
   });
 
   return (
-    <group {...props}>
+    <group  position={position} rotation={rotation} scale={scale}>
         <Sphere ref={one}>
         <meshStandardMaterial color="#E1C258" />
         </Sphere>

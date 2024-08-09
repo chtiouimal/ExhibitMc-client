@@ -11,14 +11,16 @@ const SubmitNewModelForm = ({colors, setCurrentForm, newTrack, setNewTrack, onCl
   }
 
   const handleSubmit = async () => {
-    await post(import.meta.env.VITE_NEW, newTrack)
+    let track = {...newTrack, category: 0}
+    await post(import.meta.env.VITE_NEW, track)
     setReftech(true)
       setNewTrack({
           songName: "",
           songArtist: "",
           coverArt: "",
           music: "",
-          color: ""
+          color: "",
+          category: null,
       })
       onClose();
       setCurrentForm(0);

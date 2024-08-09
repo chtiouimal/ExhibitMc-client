@@ -22,7 +22,8 @@ const ModelsList = ({setCount}) => {
         songArtist: "",
         coverArt: "",
         music: "",
-        color: ""
+        color: "",
+        category: null
     })
     const [colors,setColors] = useState([])
     const [searchQuery, setSearchQuery] = useState("")

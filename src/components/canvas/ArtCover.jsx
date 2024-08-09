@@ -1,10 +1,10 @@
 import { useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Vector3 } from "three";
 import { frameGeo } from "../../utils/geometry.helper";
 
-const ArtCover = ({ clicked, img }) => {
+const ArtCover = ({ clicked, img}) => {
   const frame = useRef();
   const photoTexture = useTexture(img);
 

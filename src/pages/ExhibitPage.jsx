@@ -1,9 +1,8 @@
 import { Canvas } from "@react-three/fiber"
-import { AudioPlayerGUI, BackDrop, ControlsPreset, EnvPreset } from "../components"
+import { AudioPlayerGUI, BackDrop, ControlsPreset, EnvPreset, ModelObject } from "../components"
 import { Grid } from "@react-three/drei"
 import useAxios from "../hooks/useAxios"
 import { useEffect, useState } from "react"
-import Model from "../components/canvas/Model"
 import { Modal } from "antd"
 import IMG from "../assets/empty-state.svg"
 import { useNavigate } from "react-router-dom"
@@ -40,8 +39,8 @@ const ExhibitPage = () => {
         <EnvPreset />
         <ControlsPreset />
         <ambientLight intensity={1} />
-        <Grid args={[12, 12]} sectionColor="#EAE9E8" sectionThickness={1.5} cellThickness={0} position={[0,-2,0]} />
-        {selectedList?.map((e,i) => <Model key={i} data={e} index={i} />)}
+        <Grid args={[12, 12]} sectionColor="#E1C258"  sectionThickness={1.25} cellThickness={0} position={[0,-2,0]} />
+        {selectedList?.map((e,i) => <ModelObject key={i} data={e} index={i} />)}
       </Canvas>
       <BackDrop />
       <AudioPlayerGUI />

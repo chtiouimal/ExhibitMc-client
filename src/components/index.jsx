@@ -12,4 +12,6 @@ export {default as LayoutFooter} from "./ui/LayoutFooter"
 /* *** canvas *** */
 export {default as ControlsPreset} from "./canvas/ControlsPreset"
 export {default as EnvPreset} from "./canvas/EnvPreset"
-export {default as Model} from "./canvas/Model"
+
+/* *** model *** */
+export {default as ModelObject} from "./models/ModelObject"

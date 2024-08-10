@@ -9,6 +9,9 @@ const NavigationHeader = () => {
             <NavLink to="">
                 <img src={LOGO} alt="mc_logo" />
             </NavLink>
+            <NavLink to="/app">
+                Explore
+            </NavLink>
         </div>
         <div className="mc-main-layout--right">
             <NavLink to="/settings">

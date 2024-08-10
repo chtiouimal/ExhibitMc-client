@@ -28,7 +28,7 @@ const ListItem = ({model,index}) => {
       {settingsContext.checkmode ? <Radio className="mc-radio" value={model}></Radio> : null}
       <div className="mc-img-light">
         <img src={model?.thumbnail ? model?.thumbnail : model.coverArt} alt={model.songName} />
-        <button className="mc-btn-round mc-btn-outlined" onClick={handlePlay}>{play ? <PauseOutlined /> : <CaretRightOutlined />}</button>
+        {model.category === 0 ? <button className="mc-btn-round mc-btn-outlined" onClick={handlePlay}>{play ? <PauseOutlined /> : <CaretRightOutlined />}</button> : null}
       </div>
       {/* <audio ref={audioRef} src={model.music} /> */}
       <div className="mc-title-light">

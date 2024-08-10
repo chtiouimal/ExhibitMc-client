@@ -283,23 +283,23 @@ div:has(div > canvas) {
 .mc-model-list header {
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-block: 32px;
+  padding-inline: 20px;
 }
-.mc-model-list .ant-radio-group {
+.mc-model-list .ant-radio-group .mc-list-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.mc-model-list .ant-radio-group .ant-radio-wrapper {
+.mc-model-list .ant-radio-group .mc-list-container .ant-radio-wrapper {
   margin-inline-end: 0;
 }
-.mc-model-list .ant-radio-group .ant-radio-wrapper span {
+.mc-model-list .ant-radio-group .mc-list-container .ant-radio-wrapper span {
   padding-inline-start: 0;
   padding-inline-end: 0;
 }
-.mc-model-list .ant-radio-group .ant-radio-wrapper .ant-radio {
+.mc-model-list .ant-radio-group .mc-list-container .ant-radio-wrapper .ant-radio {
   padding: 12px;
   background-color: #060504;
 }
@@ -331,6 +331,12 @@ div:has(div > canvas) {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mc-category-list {
+  display: flex;
   flex-direction: column;
   gap: 16px;
 }

@@ -5,6 +5,7 @@ import { MODEL_CONFIG } from "../../constants/canvas.config";
 import { useFrame } from "@react-three/fiber";
 import MusicModel from "./elements/MusicModel";
 import { AudioPlayerContext } from "../../contexts/AudioPlayerContext";
+import DigitalArtModel from "./elements/DigitalArtModel";
 
 function ModelObject({index,data}) {
   const {playerContext, setPlayerContext} = useContext(AudioPlayerContext);
@@ -43,7 +44,12 @@ function ModelObject({index,data}) {
         scale={clicked ? width > 430 ? 0.5 : 0.3 : 0.5}
         onClick={handleClick}
       >
-        <MusicModel clicked={clicked} setClicked={setClicked} index={index} data={data} playerContext={playerContext} />
+        {
+          data?.category === 0 ? 
+            <MusicModel clicked={clicked} setClicked={setClicked} index={index} data={data} playerContext={playerContext} />
+              :
+            <DigitalArtModel data={data} />
+        }
       </group>
     </Suspense>
   )

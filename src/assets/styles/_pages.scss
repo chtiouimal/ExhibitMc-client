@@ -39,11 +39,12 @@
     header {
         width: 100%;
         display: flex;
-        justify-content: center;
+        // justify-content: space-between;
         align-items: center;
         margin-block: 32px;
+        padding-inline: 20px;
     }
-    .ant-radio-group {
+    .ant-radio-group .mc-list-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -90,6 +91,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mc-category-list {
+    display: flex;
     flex-direction: column;
     gap: 16px;
 }

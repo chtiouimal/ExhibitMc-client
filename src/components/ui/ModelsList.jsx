@@ -1,13 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import useAxios from "../../hooks/useAxios"
-import ListItem from "./ListItem";
-import { Input, Radio, Skeleton } from "antd";
+import { Input, Radio } from "antd";
 import { SettingsContext } from "../../contexts/SettingsContext";
 import { CheckOutlined, PlusOutlined } from "@ant-design/icons"
 import FormDrawer from "./FormDrawer";
 import ModelPreview from "./ModelPreview";
 import NewModelForm from "../form/NewModelForm";
 import SubmitNewModelForm from "../form/SubmitNewModelForm";
+import { CATEGORIES } from "../../constants/data.constants";
+import CategoryList from "./CategoryList";
 const { Search } = Input;
 
 const ModelsList = ({setCount}) => {
@@ -89,34 +90,30 @@ const ModelsList = ({setCount}) => {
 
   return (
     <div className="mc-model-list">
-      <header>
-        {/* <Search
-          className="mc-search-input"
-          placeholder="Search by song title"
-          onSearch={onSearch}
-          style={{
-            width: 272,
-          }}
-        /> */}
-        <div>
-          <Radio.Group className="mc-radio-filter" onChange={handleSorting} defaultValue={"recent"}>
-            <Radio.Button className="mc-radio-filter-btn" value="recent">Recent</Radio.Button>
-            <Radio.Button className="mc-radio-filter-btn" value="title">Title</Radio.Button>
-            <Radio.Button className="mc-radio-filter-btn" value="artist">Artist</Radio.Button>
-          </Radio.Group>
-        </div>
-      </header>
-        <Radio.Group onChange={onChange} value={selectedItem}>
-            {
-              loading && list.length === 0 ? 
-                new Array(10).fill(null).map((_,i) => <div className="mc-card-light" key={i}>
-                  <Skeleton.Image className="mc-card-loading-light" key={i + 4} active={true} />
-                  <Skeleton.Input style={{height: 21}} active />
-                  <Skeleton.Input style={{height: 17}} active />
-                </div>) 
-              : 
-                list?.map((e,i) => <ListItem model={e} index={i} key={i} />)
-            }
+        <Radio.Group className="mc-category-list" onChange={onChange} value={selectedItem}>
+          {CATEGORIES.map((cat, i) => 
+            <div className="mc-list-container" key={i}>
+              <header>
+                {/* <Search
+                  className="mc-search-input"
+                  placeholder="Search by song title"
+                  onSearch={onSearch}
+                  style={{
+                    width: 272,
+                  }}
+                /> */}
+                <span>{cat.category}</span>
+                {/* <div>
+                  <Radio.Group className="mc-radio-filter" onChange={handleSorting} defaultValue={"recent"}>
+                    <Radio.Button className="mc-radio-filter-btn" value="recent">Recent</Radio.Button>
+                    <Radio.Button className="mc-radio-filter-btn" value="title">Title</Radio.Button>
+                    <Radio.Button className="mc-radio-filter-btn" value="artist">Artist</Radio.Button>
+                  </Radio.Group>
+                </div> */}
+              </header>
+              <CategoryList loading={loading} list={list.filter((e) => e.category === cat.id)} />
+            </div>
+          )}
         </Radio.Group>
         <div className="mc-floating">
           <button className="mc-btn mc-btn-primary mc-btn-round" onClick={settingsContext.checkmode ? handleSelection : addNewSong}>{settingsContext.checkmode ? <CheckOutlined /> : <PlusOutlined />}</button>

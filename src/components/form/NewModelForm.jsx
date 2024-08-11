@@ -1,5 +1,5 @@
 import { Form, Input } from "antd";
-import { ArrowRightOutlined, ArrowLeftOutlined, CheckOutlined } from "@ant-design/icons"
+import { ArrowRightOutlined, ArrowLeftOutlined } from "@ant-design/icons"
 import { prominent } from 'color.js'
 
 const NewModelForm = ({newTrack, setNewTrack, setCurrentForm, setColors}) => {
@@ -10,11 +10,16 @@ const NewModelForm = ({newTrack, setNewTrack, setCurrentForm, setColors}) => {
     prominent(e.target.value, { amount: 12 }).then(color => {
       setColors(color)
     });
+    console.log(newTrack)
+  }
+  const handleGoBack = () => {
+    setNewTrack(prev => ({...prev, category: null}))
+    setCurrentForm(0);
   }
   
   const onFinish = (values) => {
-    setNewTrack({...values, color: ""})
-    setCurrentForm(1)
+    setNewTrack({...newTrack,...values})
+    setCurrentForm(2)
   };
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
@@ -61,18 +66,25 @@ const NewModelForm = ({newTrack, setNewTrack, setCurrentForm, setColors}) => {
         >
           <Input onChange={handleImgChange} />
         </Form.Item>
-        <Form.Item name="music" label="Song file"
-          rules={[
-            {
-              required: true,
-              message: "Please enter the song's file",
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
+        {
+          newTrack.category === 0 ?          
+            <Form.Item name="music" label="Song file"
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter the song's file",
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+          : null
+        }
       </Form>
-      <button className="mc-btn mc-btn-round mc-btn-primary" style={{marginLeft: "auto"}} onClick={() => form.submit()}><ArrowRightOutlined /></button>
+      <div className="mc-form-actions">
+        <button className="mc-btn mc-btn-round mc-btn-outlined" onClick={handleGoBack}><ArrowLeftOutlined /></button>
+        <button className="mc-btn mc-btn-round mc-btn-primary" onClick={() => form.submit()}><ArrowRightOutlined /></button>
+      </div>
     </div>
   )
 }

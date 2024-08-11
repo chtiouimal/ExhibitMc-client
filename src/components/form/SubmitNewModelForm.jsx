@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { ArrowLeftOutlined, CheckOutlined } from "@ant-design/icons"
 import { Radio } from "antd"
 import useAxios from "../../hooks/useAxios"
@@ -7,18 +6,17 @@ const SubmitNewModelForm = ({colors, setCurrentForm, newTrack, setNewTrack, onCl
   const {data, loading, post} = useAxios()
   
   const onColorChange = (e) => {
-    setNewTrack(prev => ({...prev, color: e.target.value}))
+    setNewTrack({...newTrack, color: e.target.value})
   }
 
   const handleSubmit = async () => {
-    let track = {...newTrack, category: 0}
-    await post(import.meta.env.VITE_NEW, track)
+    await post(import.meta.env.VITE_NEW, newTrack)
     setReftech(true)
       setNewTrack({
           songName: "",
           songArtist: "",
           coverArt: "",
-          music: "",
+          music: null,
           color: "",
           category: null,
       })
@@ -28,7 +26,7 @@ const SubmitNewModelForm = ({colors, setCurrentForm, newTrack, setNewTrack, onCl
 
   const handleGoBack = () => {
     setNewTrack(prev => ({...prev, color: ""}))
-    setCurrentForm(0);
+    setCurrentForm(1);
   }
 
   return (

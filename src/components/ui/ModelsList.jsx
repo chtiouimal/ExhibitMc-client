@@ -9,6 +9,7 @@ import NewModelForm from "../form/NewModelForm";
 import SubmitNewModelForm from "../form/SubmitNewModelForm";
 import { CATEGORIES } from "../../constants/data.constants";
 import CategoryList from "./CategoryList";
+import CategoryForm from "../form/CategoryForm";
 const { Search } = Input;
 
 const ModelsList = ({setCount}) => {
@@ -22,7 +23,7 @@ const ModelsList = ({setCount}) => {
         songName: "",
         songArtist: "",
         coverArt: "",
-        music: "",
+        music: null,
         color: "",
         category: null
     })
@@ -121,7 +122,7 @@ const ModelsList = ({setCount}) => {
         {openDrawer ? 
           <FormDrawer openDrawer={openDrawer} onClose={onClose}>
             {
-              currentForm !== 0 ? 
+              currentForm > 1 ? 
                 <div style={{backgroundColor: newTrack?.color && newTrack?.color !== "" ? newTrack.color : "transparent", width: "100%", borderRadius: 10}}>
                   <ModelPreview img={newTrack?.coverArt} />
                 </div> 
@@ -130,6 +131,8 @@ const ModelsList = ({setCount}) => {
             }
             {
               currentForm === 0 ? 
+                <CategoryForm setCurrentForm={setCurrentForm} newTrack={newTrack} setNewTrack={setNewTrack} />
+              : currentForm === 1 ?
                 <NewModelForm setCurrentForm={setCurrentForm} newTrack={newTrack} setNewTrack={setNewTrack} setColors={setColors} /> 
               : 
                 <SubmitNewModelForm setReftech={setReftech} colors={colors} setNewTrack={setNewTrack} newTrack={newTrack} setPlaylist={setList} setCurrentForm={setCurrentForm} onClose={onClose}/>

@@ -41,4 +41,17 @@ const MODEL_CONFIG = [
   },
 ];
 
-export { CANVAS_CONFIG, MODEL_CONFIG };
+const TEXT_ARGS = {
+    scale: 0.03,
+    color: '#EAE9E8',
+    fontSize: 12,
+    maxWidth: 200,
+    lineHeight: 1,
+    letterSpacing: 0.02,
+    textAlign: 'left',
+    font: 'https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vaqI.woff',
+    anchorX: 'right',
+    anchorY: 'middle'
+  };
+
+export { CANVAS_CONFIG, MODEL_CONFIG, TEXT_ARGS };

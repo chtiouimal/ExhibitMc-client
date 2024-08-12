@@ -94,25 +94,31 @@ const ModelsList = ({setCount}) => {
         <Radio.Group className="mc-category-list" onChange={onChange} value={selectedItem}>
           {CATEGORIES.map((cat, i) => 
             <div className="mc-list-container" key={i}>
-              <header>
-                {/* <Search
-                  className="mc-search-input"
-                  placeholder="Search by song title"
-                  onSearch={onSearch}
-                  style={{
-                    width: 272,
-                  }}
-                /> */}
-                <span>{cat.category}</span>
-                {/* <div>
-                  <Radio.Group className="mc-radio-filter" onChange={handleSorting} defaultValue={"recent"}>
-                    <Radio.Button className="mc-radio-filter-btn" value="recent">Recent</Radio.Button>
-                    <Radio.Button className="mc-radio-filter-btn" value="title">Title</Radio.Button>
-                    <Radio.Button className="mc-radio-filter-btn" value="artist">Artist</Radio.Button>
-                  </Radio.Group>
-                </div> */}
-              </header>
-              <CategoryList loading={loading} list={list.filter((e) => e.category === cat.id)} />
+              {
+                list.filter((e) => e.category === cat.id).length ? 
+                <>
+                  <header>
+                    {/* <Search
+                      className="mc-search-input"
+                      placeholder="Search by song title"
+                      onSearch={onSearch}
+                      style={{
+                        width: 272,
+                      }}
+                    /> */}
+                    <span>{cat.category}</span>
+                    {/* <div>
+                      <Radio.Group className="mc-radio-filter" onChange={handleSorting} defaultValue={"recent"}>
+                        <Radio.Button className="mc-radio-filter-btn" value="recent">Recent</Radio.Button>
+                        <Radio.Button className="mc-radio-filter-btn" value="title">Title</Radio.Button>
+                        <Radio.Button className="mc-radio-filter-btn" value="artist">Artist</Radio.Button>
+                      </Radio.Group>
+                    </div> */}
+                  </header>
+                  <CategoryList loading={loading} list={list.filter((e) => e.category === cat.id)} />
+                </>
+                : null
+              }
             </div>
           )}
         </Radio.Group>

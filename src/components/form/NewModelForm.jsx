@@ -10,7 +10,6 @@ const NewModelForm = ({newTrack, setNewTrack, setCurrentForm, setColors}) => {
     prominent(e.target.value, { amount: 12 }).then(color => {
       setColors(color)
     });
-    console.log(newTrack)
   }
   const handleGoBack = () => {
     setNewTrack(prev => ({...prev, category: null}))

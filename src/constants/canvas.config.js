@@ -49,7 +49,8 @@ const TEXT_ARGS = {
     lineHeight: 1,
     letterSpacing: 0.02,
     textAlign: 'left',
-    font: 'https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vaqI.woff',
+    font: "/fonts/Oswald-Bold.ttf",
+    fontWeight: 700,
     anchorX: 'right',
     anchorY: 'middle'
   };

@@ -130,7 +130,7 @@ const ModelsList = ({setCount}) => {
             {
               currentForm > 1 ? 
                 <div style={{backgroundColor: newTrack?.color && newTrack?.color !== "" ? newTrack.color : "transparent", width: "100%", borderRadius: 10}}>
-                  <ModelPreview img={newTrack?.coverArt} />
+                  <ModelPreview img={newTrack?.coverArt} category={newTrack.category} />
                 </div> 
               : 
                 null

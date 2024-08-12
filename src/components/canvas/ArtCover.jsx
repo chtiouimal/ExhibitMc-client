@@ -1,10 +1,12 @@
-import { useTexture } from "@react-three/drei";
+import { Text, useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
 import { Vector3 } from "three";
 import { frameGeo } from "../../utils/geometry.helper";
+import { TEXT_ARGS } from "../../constants/canvas.config";
+import { CATEGORIES } from "../../constants/data.constants";
 
-const ArtCover = ({ clicked, img}) => {
+const ArtCover = ({ clicked, img, category}) => {
   const frame = useRef();
   const photoTexture = useTexture(img);
 
@@ -23,6 +25,7 @@ const ArtCover = ({ clicked, img}) => {
       position={[0, 0.5, 0]}
       geometry={frameGeo({ x: 10, y: 10, z: 0.25 })}
     >
+      <Text {...TEXT_ARGS} position={[4.5,5.5,0]}>{CATEGORIES[category].category.toUpperCase()}</Text>
       <meshStandardMaterial attach="material-4" map={photoTexture} />
       <meshStandardMaterial attach="material-0" color="black" />
       <meshStandardMaterial attach="material-1" color="black" />

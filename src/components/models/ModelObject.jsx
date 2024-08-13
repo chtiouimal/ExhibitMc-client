@@ -6,6 +6,7 @@ import { useFrame } from "@react-three/fiber";
 import MusicModel from "./elements/MusicModel";
 import { AudioPlayerContext } from "../../contexts/AudioPlayerContext";
 import DigitalArtModel from "./elements/DigitalArtModel";
+import AnimationModel from "./elements/AnimationModel";
 
 function ModelObject({index,data}) {
   const {playerContext, setPlayerContext} = useContext(AudioPlayerContext);
@@ -47,6 +48,8 @@ function ModelObject({index,data}) {
         {
           data?.category === 0 ? 
             <MusicModel clicked={clicked} setClicked={setClicked} index={index} data={data} playerContext={playerContext} />
+              : data?.category === 3 ?
+            <AnimationModel data={data} />
               :
             <DigitalArtModel data={data} />
         }

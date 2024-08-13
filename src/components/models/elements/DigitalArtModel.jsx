@@ -18,7 +18,7 @@ function DigitalArtModel({data}) {
   };
 
   return (
-    <group>     
+    <group>
       <Text {...TEXT_ARGS} position={[(imageDimensions.width /2) - 0.5 ,(imageDimensions.height /2) + 0.5,0]}>
         {CATEGORIES[category].category.toUpperCase()}
       </Text>

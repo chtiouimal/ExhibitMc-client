@@ -10,6 +10,10 @@ const CATEGORIES =  [
     {
         id: 2,
         category: "Digital Art"
+    },
+    {
+        id: 3,
+        category: "Animation"
     }
 ]
 

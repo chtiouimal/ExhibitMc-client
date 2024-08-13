@@ -12,9 +12,17 @@ function DigitalArtModel({data}) {
   
   const texture = useLoader(TextureLoader, coverArt);
 
+  const imageResizer = (value) => {
+    if (texture.image.height > texture.image.width && texture.image.height < 900) {
+      return value / 70
+    }
+
+    return value /100
+  }
+
   const imageDimensions = {
-    width: texture.image.width / 100,
-    height: texture.image.height / 100,
+    width: imageResizer(texture.image.width),
+    height: imageResizer(texture.image.height),
   };
 
   return (

@@ -79,6 +79,20 @@ const NewModelForm = ({newTrack, setNewTrack, setCurrentForm, setColors}) => {
             </Form.Item>
           : null
         }
+        {
+          newTrack.category === 3 ?          
+            <Form.Item name="video" label="video file"
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter the video's file",
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+          : null
+        }
       </Form>
       <div className="mc-form-actions">
         <button className="mc-btn mc-btn-round mc-btn-outlined" onClick={handleGoBack}><ArrowLeftOutlined /></button>

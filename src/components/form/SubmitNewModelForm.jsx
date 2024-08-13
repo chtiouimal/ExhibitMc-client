@@ -19,6 +19,7 @@ const SubmitNewModelForm = ({colors, setCurrentForm, newTrack, setNewTrack, onCl
           music: null,
           color: "",
           category: null,
+          video: null
       })
       onClose();
       setCurrentForm(0);

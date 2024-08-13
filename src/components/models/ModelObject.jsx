@@ -19,10 +19,8 @@ function ModelObject({index,data}) {
 
   const handleClick = async () => {
     setClicked(!clicked)
-    if (data?.music) { 
-        let player = {...playerContext, isPlaying: !clicked, trackIndex: index, selectedTrack: data,type: "SELECTED"}
-        setPlayerContext(player)
-    }
+    let player = {...playerContext, isPlaying: data?.music ? !clicked : false, trackIndex: data?.music ? index : -1, selectedTrack: data,type: "SELECTED"}
+    setPlayerContext(player)
   };
 
   useFrame((state) => {

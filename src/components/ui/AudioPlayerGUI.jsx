@@ -9,7 +9,7 @@ const AudioPlayerGUI = () => {
     setPlayerContext(prev => ({...prev, isPlaying: !prev.isPlaying}))
   }
 
-  return Object.keys(playerContext.selectedTrack).length > 0 && playerContext.type === "SELECTED" ? (
+  return Object.keys(playerContext.selectedTrack).length > 0 && playerContext.type === "SELECTED" && playerContext?.selectedTrack.music !== null ? (
     <div className="mc-audioplayer-gui">
         <div className="mc-audioplayer-img" onClick={handleClick}>
             <img src={playerContext.selectedTrack.coverArt} className={playerContext.isPlaying ? "mc-rotate-animation" : ""} alt={playerContext.selectedTrack.songName} />

@@ -123,9 +123,9 @@ const ModelsList = ({setCount}) => {
             </div>
           )}
         </Radio.Group>
-        <div className="mc-floating">
+      {/* <div className="mc-floating">
           <button className="mc-btn mc-btn-primary mc-btn-round" onClick={settingsContext.checkmode ? handleSelection : addNewSong}>{settingsContext.checkmode ? <CheckOutlined /> : <PlusOutlined />}</button>
-        </div>
+        </div> */}
         {openDrawer ? 
           <FormDrawer openDrawer={openDrawer} onClose={onClose}>
             {

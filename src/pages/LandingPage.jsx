@@ -10,7 +10,7 @@ function LandingPage() {
   return (
     <div className="mc-landing-page">
         <h1>Malek Chtioui</h1>
-        <h3>Music producer</h3>
+        <h3>Full Stack Developer</h3>
         <button onClick={handleNavigation}>Explore</button>
     </div>
   )
